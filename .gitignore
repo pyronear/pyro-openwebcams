@@ -37,6 +37,3 @@ yarn-error.log*
 next-env.d.ts
 
 .eslintcache
-
-# clerk configuration (can include secrets)
-/.clerk/

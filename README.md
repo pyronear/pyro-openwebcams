@@ -11,7 +11,6 @@ WIP
 
 ## Features 🛠️
 
-- [**Clerk**](https://clerk.com/docs) : Clerk supports multiple authentication strategies so that you can implement the strategy that makes sense for your users.
 - [**Commitlint**](https://commitlint.js.org/) : Commit conventions allow your team to add more semantic meaning to your git history. This e.g. includes type, scope or breaking changes.
 - [**Husky** 🐶](https://typicode.github.io/husky/) : Automatically lint your commit messages, code, and run tests upon committing or pushing.
 - [**i18n**](https://next-intl-docs.vercel.app/) : The process of designing and developing software so it can be adapted for users of different cultures and languages
@@ -138,12 +137,6 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 └── vercel.json                 # Vercel deployment configuration
 ```
 
-### Clerk
-
-WIP
-
----
-
 ### Commitlint
 
 commitlint checks if your commit messages meet the [conventional commit format](https://conventionalcommits.org).
@@ -244,23 +237,18 @@ This project uses the `next-intl` library for internationalization (i18n). Below
    ```ts
    import createMiddleware from "next-intl/middleware";
 
-   import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
-
    import { routing } from "./i18n/routing";
 
-   const handleI18nRouting = createMiddleware(routing);
-   const isProtectedRoute = createRouteMatcher(["/:locale/dashboard(.*)"]);
-
-   export default clerkMiddleware(async (auth, req) => {
-     if (isProtectedRoute(req)) await auth.protect();
-     return handleI18nRouting(req);
-   });
+   export default createMiddleware(routing);
 
    export const config = {
      matcher: [
+       // Match only internationalized pathnames
        "/",
        "/(en|fr)/:path*",
+       // Skip Next.js internals and all static files, unless found in search params
        "/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)",
+       // Always run for API routes
        "/(api|trpc)(.*)",
      ],
    };
@@ -497,7 +485,6 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ### Auth
 
-- [Clerk](https://clerk.com/docs)
 - [Kinde](https://kinde.com/)
 
 ### Components

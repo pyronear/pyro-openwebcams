@@ -6,9 +6,6 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 
-import { enUS, frFR } from "@clerk/localizations";
-import { ClerkProvider, SignedIn, SignedOut } from "@clerk/nextjs";
-
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
@@ -17,13 +14,6 @@ import { Locale, routing } from "@/i18n/routing";
 import "../globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
-
-const CLERK_CONFIG = {
-  layout: {
-    logoLinkUrl: "https://yoursite.com/",
-  },
-  supportEmail: "support@yourcompany.com",
-};
 
 export const metadata: Metadata = {
   title: "Next Js Boilerplate",
@@ -48,50 +38,23 @@ export default async function RootLayout({
   // side is the easiest way to get started
   const messages = await getMessages();
 
-  let clerkLocale;
-
-  switch (locale) {
-    case "fr":
-      clerkLocale = frFR;
-      break;
-    case "en":
-      clerkLocale = enUS;
-      break;
-    default:
-      break;
-  }
-
   return (
-    <ClerkProvider
-      appearance={{
-        layout: {
-          logoLinkUrl: CLERK_CONFIG.layout.logoLinkUrl,
-        },
-      }}
-      localization={clerkLocale}
-      supportEmail={CLERK_CONFIG.supportEmail}
-    >
-      <html className={inter.className} lang={locale} suppressHydrationWarning>
-        <body
-          className="flex h-screen flex-col font-light"
-          suppressHydrationWarning
-        >
-          <NextIntlClientProvider messages={messages}>
-            <ThemeProvider
-              attribute="class"
-              defaultTheme="system"
-              disableTransitionOnChange
-              enableSystem
-            >
-              <TooltipProvider>
-                <SignedOut>{children}</SignedOut>
-
-                <SignedIn>{children} </SignedIn>
-              </TooltipProvider>
-            </ThemeProvider>
-          </NextIntlClientProvider>
-        </body>
-      </html>
-    </ClerkProvider>
+    <html className={inter.className} lang={locale} suppressHydrationWarning>
+      <body
+        className="flex h-screen flex-col font-light"
+        suppressHydrationWarning
+      >
+        <NextIntlClientProvider messages={messages}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            disableTransitionOnChange
+            enableSystem
+          >
+            <TooltipProvider>{children}</TooltipProvider>
+          </ThemeProvider>
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }
