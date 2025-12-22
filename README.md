@@ -1,7 +1,5 @@
 # Pyronear Open Webcams
 
-![Github Banner 1280x640](https://github.com/cfatrane/nextjs-boilerplate/assets/17748314/392e9faa-349e-4a31-b550-b72c89709829)
-
 ## Table of Contents 📋
 
 WIP
@@ -312,7 +310,7 @@ This project uses the `next-intl` library for internationalization (i18n). Below
    import { useTranslations } from "next-intl";
 
    export default function Home() {
-     const t = useTranslations("Home");
+     const t = useTranslations("home");
 
      return (
        <main>
@@ -327,7 +325,7 @@ This project uses the `next-intl` library for internationalization (i18n). Below
    Use the `Link` component from `next-intl/navigation` to create links that respect the current locale. For example:
 
    ```tsx
-   import { Link } from "@/i18n/routing";
+   import { Link } from "@/i18n/navigation";
 
    export default function Navigation() {
      return (

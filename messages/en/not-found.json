@@ -1,7 +1,5 @@
 {
-  "notFound": {
-    "title": "Page not found",
-    "subtitle": "Sorry, we couldn’t find the page you’re looking for.",
-    "return": "Go back home"
-  }
+  "title": "Page not found",
+  "subtitle": "Sorry, we couldn’t find the page you’re looking for.",
+  "return": "Go back home"
 }
