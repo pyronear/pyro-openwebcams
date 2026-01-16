@@ -14,5 +14,9 @@
   "Deploy": {
     "title": "Deployer",
     "text": "Déployez instantanément votre site Next.js vers une URL partageable avec Vercel."
+  },
+  "Topbar": {
+    "evaluate": "Evaluer des webcams",
+    "addWebcams": "Ajouter des webcams"
   }
 }
