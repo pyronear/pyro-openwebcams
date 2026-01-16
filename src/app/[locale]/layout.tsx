@@ -6,8 +6,10 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 
+import { CssBaseline } from "@mui/material";
+
 import { ThemeProvider } from "@/components/theme-provider";
-import { TooltipProvider } from "@/components/ui/tooltip";
+import { Topbar } from "@/components/Topbar/Topbar";
 
 import { Locale, routing } from "@/i18n/routing";
 
@@ -51,7 +53,11 @@ export default async function RootLayout({
             disableTransitionOnChange
             enableSystem
           >
-            <TooltipProvider>{children}</TooltipProvider>
+            <CssBaseline />
+
+            <Topbar />
+
+            {children}
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

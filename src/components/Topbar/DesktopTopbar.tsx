@@ -8,7 +8,7 @@ import { AppBar, Stack, Toolbar } from "@mui/material";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 export const DesktopTopbar = () => {
-  const t = useTranslations("home");
+  const t = useTranslations("layout");
 
   return (
     <>

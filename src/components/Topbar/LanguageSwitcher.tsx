@@ -27,7 +27,7 @@ export default function LanguageSwitcher() {
     changeLanguage(event.target.value);
   };
 
-  const t = useTranslations("home");
+  const t = useTranslations("layout");
 
   return (
     <FormControl size="small" sx={{ minWidth: 150 }} variant="outlined">

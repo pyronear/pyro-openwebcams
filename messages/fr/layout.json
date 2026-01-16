@@ -1,0 +1,10 @@
+{
+  "Topbar": {
+    "evaluate": "Evaluer des webcams",
+    "addWebcams": "Ajouter des webcams",
+    "languageSwitcher": {
+      "english": "Anglais",
+      "french": "Français"
+    }
+  }
+}
