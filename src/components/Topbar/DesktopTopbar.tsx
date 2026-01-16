@@ -5,6 +5,8 @@ import { useTranslations } from "next-intl";
 
 import { AppBar, Stack, Toolbar } from "@mui/material";
 
+import LanguageSwitcher from "./LanguageSwitcher";
+
 export const DesktopTopbar = () => {
   const t = useTranslations("home");
 
@@ -42,7 +44,7 @@ export const DesktopTopbar = () => {
               justifyContent="space-around"
               spacing={2}
             >
-              {/* <LanguageSwitcher /> */}
+              <LanguageSwitcher />
             </Stack>
           </Stack>
         </Toolbar>

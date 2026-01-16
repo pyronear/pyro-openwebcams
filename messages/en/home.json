@@ -17,6 +17,10 @@
   },
   "Topbar": {
     "evaluate": "Evaluate webcams",
-    "addWebcams": "Add webcams"
+    "addWebcams": "Add webcams",
+    "languageSwitcher": {
+      "english": "English",
+      "french": "French"
+    }
   }
 }
