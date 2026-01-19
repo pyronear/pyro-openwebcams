@@ -6,14 +6,9 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 
-import { CssBaseline } from "@mui/material";
-
-import { ThemeProvider } from "@/components/theme-provider";
 import { Topbar } from "@/components/Topbar/Topbar";
 
 import { Locale, routing } from "@/i18n/routing";
-
-import "../globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -47,18 +42,9 @@ export default async function RootLayout({
         suppressHydrationWarning
       >
         <NextIntlClientProvider messages={messages}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            disableTransitionOnChange
-            enableSystem
-          >
-            <CssBaseline />
+          <Topbar />
 
-            <Topbar />
-
-            {children}
-          </ThemeProvider>
+          {children}
         </NextIntlClientProvider>
       </body>
     </html>

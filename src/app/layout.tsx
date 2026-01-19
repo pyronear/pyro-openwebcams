@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 
+import { CssBaseline } from "@mui/material";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import { ThemeProvider } from "@mui/material/styles";
 
@@ -15,7 +16,11 @@ type Props = {
 export default function RootLayout({ children }: Readonly<Props>) {
   return (
     <AppRouterCacheProvider>
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+
+        {children}
+      </ThemeProvider>
     </AppRouterCacheProvider>
   );
 }
