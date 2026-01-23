@@ -22,7 +22,7 @@ export const DesktopTopbar = () => {
             px={2}
           >
             <Stack alignItems="center" direction="row" spacing={5}>
-              <Link href="#">
+              <Link href="/">
                 <Image
                   alt=""
                   height={80}
@@ -32,7 +32,7 @@ export const DesktopTopbar = () => {
               </Link>
 
               <Stack direction="row" spacing={2}>
-                <Link href="#">{t("Topbar.evaluate")}</Link>
+                <Link href="/webcams">{t("Topbar.evaluate")}</Link>
 
                 <Link href="#">{t("Topbar.addWebcams")}</Link>
               </Stack>

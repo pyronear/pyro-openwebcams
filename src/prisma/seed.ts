@@ -21,15 +21,15 @@ export async function main() {
     data: [
       {
         code: integrationStatusCodeIntegrated,
-        labelKey: "db.integrationStatus.integrated",
+        labelKey: "integrationStatus.integrated",
       },
       {
         code: integrationStatusCodeEvaluation,
-        labelKey: "db.integrationStatus.evaluation",
+        labelKey: "integrationStatus.evaluation",
       },
       {
         code: integrationStatusCodeRejected,
-        labelKey: "db.integrationStatus.rejected",
+        labelKey: "integrationStatus.rejected",
       },
     ],
     skipDuplicates: true,
