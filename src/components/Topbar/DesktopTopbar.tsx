@@ -26,7 +26,7 @@ export const DesktopTopbar = () => {
                 <Image
                   alt=""
                   height={80}
-                  src="logos/logo-pyronear.svg"
+                  src="/logos/logo-pyronear.svg"
                   width={200}
                 />
               </Link>
