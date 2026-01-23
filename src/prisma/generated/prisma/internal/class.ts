@@ -19,7 +19,7 @@ const config: runtime.GetPrismaClientConfig = {
   engineVersion: "9d6ad21cbbceab97458517b147a6a09ff43aa735",
   activeProvider: "postgresql",
   inlineSchema:
-    '// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider = "prisma-client"\n  output   = "../app/generated/prisma"\n}\n\ndatasource db {\n  provider = "postgresql"\n}\n\nmodel Webcam {\n  id                  Int               @id @default(autoincrement())\n  name                String            @unique\n  angleOfView         Float\n  elevation           Int?\n  latitude            Float\n  longitude           Float\n  refreshSeconds      Int?\n  comments            String?\n  integrationStatusId Int\n  integrationStatus   IntegrationStatus @relation(fields: [integrationStatusId], references: [id])\n}\n\nmodel IntegrationStatus {\n  id       Int    @id @default(autoincrement())\n  code     String @unique\n  labelKey String\n\n  webcams Webcam[]\n}\n',
+    '// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider = "prisma-client"\n  output   = "./generated/prisma"\n}\n\ndatasource db {\n  provider = "postgresql"\n}\n\nmodel Webcam {\n  id                  Int               @id @default(autoincrement())\n  name                String            @unique\n  angleOfView         Float\n  elevation           Int?\n  latitude            Float\n  longitude           Float\n  refreshSeconds      Int?\n  comments            String?\n  integrationStatusId Int\n  integrationStatus   IntegrationStatus @relation(fields: [integrationStatusId], references: [id])\n}\n\nmodel IntegrationStatus {\n  id       Int    @id @default(autoincrement())\n  code     String @unique\n  labelKey String\n\n  webcams Webcam[]\n}\n',
   runtimeDataModel: {
     models: {},
     enums: {},
@@ -41,14 +41,11 @@ async function decodeBase64AsWasm(
 
 config.compilerWasm = {
   getRuntime: async () =>
-    await import(
-      "@prisma/client/runtime/query_compiler_fast_bg.postgresql.mjs"
-    ),
+    await import("@prisma/client/runtime/query_compiler_fast_bg.postgresql.mjs"),
 
   getQueryCompilerWasmModule: async () => {
-    const { wasm } = await import(
-      "@prisma/client/runtime/query_compiler_fast_bg.postgresql.wasm-base64.mjs"
-    );
+    const { wasm } =
+      await import("@prisma/client/runtime/query_compiler_fast_bg.postgresql.wasm-base64.mjs");
     return await decodeBase64AsWasm(wasm);
   },
 
@@ -85,8 +82,8 @@ export interface PrismaClientConstructor {
     }
       ? U
       : Prisma.PrismaClientOptions["omit"],
-    ExtArgs extends
-      runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+    ExtArgs extends runtime.Types.Extensions.InternalArgs =
+      runtime.Types.Extensions.DefaultArgs,
   >(
     options: Prisma.Subset<Options, Prisma.PrismaClientOptions>,
   ): PrismaClient<LogOpts, OmitOpts, ExtArgs>;
@@ -109,8 +106,8 @@ export interface PrismaClientConstructor {
 export interface PrismaClient<
   in LogOpts extends Prisma.LogLevel = never,
   in out OmitOpts extends Prisma.PrismaClientOptions["omit"] = undefined,
-  in out ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  in out ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > {
   [K: symbol]: { types: Prisma.TypeMap<ExtArgs>["other"] };
 

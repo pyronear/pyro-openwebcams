@@ -142,8 +142,8 @@ export type WebcamCountAggregateInputType = {
 };
 
 export type WebcamAggregateArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Filter which Webcam to aggregate.
@@ -216,8 +216,8 @@ export type GetWebcamAggregateType<T extends WebcamAggregateArgs> = {
 };
 
 export type WebcamGroupByArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   where?: Prisma.WebcamWhereInput;
   orderBy?:
@@ -747,8 +747,8 @@ export type WebcamUncheckedUpdateManyWithoutIntegrationStatusInput = {
 };
 
 export type WebcamSelect<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -766,8 +766,8 @@ export type WebcamSelect<
 >;
 
 export type WebcamSelectCreateManyAndReturn<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -785,8 +785,8 @@ export type WebcamSelectCreateManyAndReturn<
 >;
 
 export type WebcamSelectUpdateManyAndReturn<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -816,8 +816,8 @@ export type WebcamSelectScalar = {
 };
 
 export type WebcamOmit<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetOmit<
   | "id"
   | "name"
@@ -831,27 +831,27 @@ export type WebcamOmit<
   ExtArgs["result"]["webcam"]
 >;
 export type WebcamInclude<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   integrationStatus?: boolean | Prisma.IntegrationStatusDefaultArgs<ExtArgs>;
 };
 export type WebcamIncludeCreateManyAndReturn<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   integrationStatus?: boolean | Prisma.IntegrationStatusDefaultArgs<ExtArgs>;
 };
 export type WebcamIncludeUpdateManyAndReturn<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   integrationStatus?: boolean | Prisma.IntegrationStatusDefaultArgs<ExtArgs>;
 };
 
 export type $WebcamPayload<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   name: "Webcam";
   objects: {
@@ -879,15 +879,15 @@ export type WebcamGetPayload<
 > = runtime.Types.Result.GetResult<Prisma.$WebcamPayload, S>;
 
 export type WebcamCountArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = Omit<WebcamFindManyArgs, "select" | "include" | "distinct" | "omit"> & {
   select?: WebcamCountAggregateInputType | true;
 };
 
 export interface WebcamDelegate<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
   GlobalOmitOptions = {},
 > {
   [K: symbol]: {
@@ -1413,8 +1413,8 @@ export interface WebcamDelegate<
 export interface Prisma__WebcamClient<
   T,
   Null = never,
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
   GlobalOmitOptions = {},
 > extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise";
@@ -1492,8 +1492,8 @@ export interface WebcamFieldRefs {
  * Webcam findUnique
  */
 export type WebcamFindUniqueArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Webcam
@@ -1517,8 +1517,8 @@ export type WebcamFindUniqueArgs<
  * Webcam findUniqueOrThrow
  */
 export type WebcamFindUniqueOrThrowArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Webcam
@@ -1542,8 +1542,8 @@ export type WebcamFindUniqueOrThrowArgs<
  * Webcam findFirst
  */
 export type WebcamFindFirstArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Webcam
@@ -1599,8 +1599,8 @@ export type WebcamFindFirstArgs<
  * Webcam findFirstOrThrow
  */
 export type WebcamFindFirstOrThrowArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Webcam
@@ -1656,8 +1656,8 @@ export type WebcamFindFirstOrThrowArgs<
  * Webcam findMany
  */
 export type WebcamFindManyArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Webcam
@@ -1708,8 +1708,8 @@ export type WebcamFindManyArgs<
  * Webcam create
  */
 export type WebcamCreateArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Webcam
@@ -1733,8 +1733,8 @@ export type WebcamCreateArgs<
  * Webcam createMany
  */
 export type WebcamCreateManyArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * The data used to create many Webcams.
@@ -1747,8 +1747,8 @@ export type WebcamCreateManyArgs<
  * Webcam createManyAndReturn
  */
 export type WebcamCreateManyAndReturnArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Webcam
@@ -1773,8 +1773,8 @@ export type WebcamCreateManyAndReturnArgs<
  * Webcam update
  */
 export type WebcamUpdateArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Webcam
@@ -1802,8 +1802,8 @@ export type WebcamUpdateArgs<
  * Webcam updateMany
  */
 export type WebcamUpdateManyArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * The data used to update Webcams.
@@ -1826,8 +1826,8 @@ export type WebcamUpdateManyArgs<
  * Webcam updateManyAndReturn
  */
 export type WebcamUpdateManyAndReturnArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Webcam
@@ -1862,8 +1862,8 @@ export type WebcamUpdateManyAndReturnArgs<
  * Webcam upsert
  */
 export type WebcamUpsertArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Webcam
@@ -1901,8 +1901,8 @@ export type WebcamUpsertArgs<
  * Webcam delete
  */
 export type WebcamDeleteArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Webcam
@@ -1926,8 +1926,8 @@ export type WebcamDeleteArgs<
  * Webcam deleteMany
  */
 export type WebcamDeleteManyArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Filter which Webcams to delete
@@ -1943,8 +1943,8 @@ export type WebcamDeleteManyArgs<
  * Webcam without action
  */
 export type WebcamDefaultArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Webcam

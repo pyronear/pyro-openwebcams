@@ -82,8 +82,8 @@ export type IntegrationStatusCountAggregateInputType = {
 };
 
 export type IntegrationStatusAggregateArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Filter which IntegrationStatus to aggregate.
@@ -160,8 +160,8 @@ export type GetIntegrationStatusAggregateType<
 };
 
 export type IntegrationStatusGroupByArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   where?: Prisma.IntegrationStatusWhereInput;
   orderBy?:
@@ -427,8 +427,8 @@ export type IntegrationStatusCountOutputType = {
 };
 
 export type IntegrationStatusCountOutputTypeSelect<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   webcams?: boolean | IntegrationStatusCountOutputTypeCountWebcamsArgs;
 };
@@ -437,8 +437,8 @@ export type IntegrationStatusCountOutputTypeSelect<
  * IntegrationStatusCountOutputType without action
  */
 export type IntegrationStatusCountOutputTypeDefaultArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the IntegrationStatusCountOutputType
@@ -450,15 +450,15 @@ export type IntegrationStatusCountOutputTypeDefaultArgs<
  * IntegrationStatusCountOutputType without action
  */
 export type IntegrationStatusCountOutputTypeCountWebcamsArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   where?: Prisma.WebcamWhereInput;
 };
 
 export type IntegrationStatusSelect<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -473,8 +473,8 @@ export type IntegrationStatusSelect<
 >;
 
 export type IntegrationStatusSelectCreateManyAndReturn<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -485,8 +485,8 @@ export type IntegrationStatusSelectCreateManyAndReturn<
 >;
 
 export type IntegrationStatusSelectUpdateManyAndReturn<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -503,15 +503,15 @@ export type IntegrationStatusSelectScalar = {
 };
 
 export type IntegrationStatusOmit<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetOmit<
   "id" | "code" | "labelKey",
   ExtArgs["result"]["integrationStatus"]
 >;
 export type IntegrationStatusInclude<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   webcams?: boolean | Prisma.IntegrationStatus$webcamsArgs<ExtArgs>;
   _count?:
@@ -519,17 +519,17 @@ export type IntegrationStatusInclude<
     | Prisma.IntegrationStatusCountOutputTypeDefaultArgs<ExtArgs>;
 };
 export type IntegrationStatusIncludeCreateManyAndReturn<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {};
 export type IntegrationStatusIncludeUpdateManyAndReturn<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {};
 
 export type $IntegrationStatusPayload<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   name: "IntegrationStatus";
   objects: {
@@ -551,8 +551,8 @@ export type IntegrationStatusGetPayload<
 > = runtime.Types.Result.GetResult<Prisma.$IntegrationStatusPayload, S>;
 
 export type IntegrationStatusCountArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = Omit<
   IntegrationStatusFindManyArgs,
   "select" | "include" | "distinct" | "omit"
@@ -561,8 +561,8 @@ export type IntegrationStatusCountArgs<
 };
 
 export interface IntegrationStatusDelegate<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
   GlobalOmitOptions = {},
 > {
   [K: symbol]: {
@@ -1107,8 +1107,8 @@ export interface IntegrationStatusDelegate<
 export interface Prisma__IntegrationStatusClient<
   T,
   Null = never,
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
   GlobalOmitOptions = {},
 > extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise";
@@ -1175,8 +1175,8 @@ export interface IntegrationStatusFieldRefs {
  * IntegrationStatus findUnique
  */
 export type IntegrationStatusFindUniqueArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the IntegrationStatus
@@ -1200,8 +1200,8 @@ export type IntegrationStatusFindUniqueArgs<
  * IntegrationStatus findUniqueOrThrow
  */
 export type IntegrationStatusFindUniqueOrThrowArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the IntegrationStatus
@@ -1225,8 +1225,8 @@ export type IntegrationStatusFindUniqueOrThrowArgs<
  * IntegrationStatus findFirst
  */
 export type IntegrationStatusFindFirstArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the IntegrationStatus
@@ -1284,8 +1284,8 @@ export type IntegrationStatusFindFirstArgs<
  * IntegrationStatus findFirstOrThrow
  */
 export type IntegrationStatusFindFirstOrThrowArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the IntegrationStatus
@@ -1343,8 +1343,8 @@ export type IntegrationStatusFindFirstOrThrowArgs<
  * IntegrationStatus findMany
  */
 export type IntegrationStatusFindManyArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the IntegrationStatus
@@ -1397,8 +1397,8 @@ export type IntegrationStatusFindManyArgs<
  * IntegrationStatus create
  */
 export type IntegrationStatusCreateArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the IntegrationStatus
@@ -1425,8 +1425,8 @@ export type IntegrationStatusCreateArgs<
  * IntegrationStatus createMany
  */
 export type IntegrationStatusCreateManyArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * The data used to create many IntegrationStatuses.
@@ -1441,8 +1441,8 @@ export type IntegrationStatusCreateManyArgs<
  * IntegrationStatus createManyAndReturn
  */
 export type IntegrationStatusCreateManyAndReturnArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the IntegrationStatus
@@ -1465,8 +1465,8 @@ export type IntegrationStatusCreateManyAndReturnArgs<
  * IntegrationStatus update
  */
 export type IntegrationStatusUpdateArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the IntegrationStatus
@@ -1497,8 +1497,8 @@ export type IntegrationStatusUpdateArgs<
  * IntegrationStatus updateMany
  */
 export type IntegrationStatusUpdateManyArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * The data used to update IntegrationStatuses.
@@ -1521,8 +1521,8 @@ export type IntegrationStatusUpdateManyArgs<
  * IntegrationStatus updateManyAndReturn
  */
 export type IntegrationStatusUpdateManyAndReturnArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the IntegrationStatus
@@ -1553,8 +1553,8 @@ export type IntegrationStatusUpdateManyAndReturnArgs<
  * IntegrationStatus upsert
  */
 export type IntegrationStatusUpsertArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the IntegrationStatus
@@ -1592,8 +1592,8 @@ export type IntegrationStatusUpsertArgs<
  * IntegrationStatus delete
  */
 export type IntegrationStatusDeleteArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the IntegrationStatus
@@ -1617,8 +1617,8 @@ export type IntegrationStatusDeleteArgs<
  * IntegrationStatus deleteMany
  */
 export type IntegrationStatusDeleteManyArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Filter which IntegrationStatuses to delete
@@ -1634,8 +1634,8 @@ export type IntegrationStatusDeleteManyArgs<
  * IntegrationStatus.webcams
  */
 export type IntegrationStatus$webcamsArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Webcam
@@ -1663,8 +1663,8 @@ export type IntegrationStatus$webcamsArgs<
  * IntegrationStatus without action
  */
 export type IntegrationStatusDefaultArgs<
-  ExtArgs extends
-    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends runtime.Types.Extensions.InternalArgs =
+    runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the IntegrationStatus
