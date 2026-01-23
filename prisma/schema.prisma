@@ -5,33 +5,31 @@
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
 generator client {
-  provider        = "prisma-client-js"
-  previewFeatures = ["driverAdapters"]
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
 }
 
 datasource db {
-  provider  = "postgresql"
-  url       = env("DATABASE_URL")
-  directUrl = env("DIRECT_URL")
+  provider = "postgresql"
 }
 
-model User {
-  id                      String   @id @default(cuid())
-  username                String?
-  firstName               String?
-  lastName                String?
-  email                   String   @unique
-  hasVerifiedEmailAddress Boolean  @default(false)
-  imageUrl                String?
-  lastActiveAt            DateTime @default(now())
-  lastSignInAt            DateTime @default(now())
-  role                    Role     @default(USER)
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+model Webcam {
+  id                  Int               @id @default(autoincrement())
+  name                String            @unique
+  angleOfView         Float
+  elevation           Int?
+  latitude            Float
+  longitude           Float
+  refreshSeconds      Int?
+  comments            String?
+  integrationStatusId Int
+  integrationStatus   IntegrationStatus @relation(fields: [integrationStatusId], references: [id])
 }
 
-enum Role {
-  USER
-  ADMIN
+model IntegrationStatus {
+  id       Int    @id @default(autoincrement())
+  code     String @unique
+  labelKey String
+
+  webcams Webcam[]
 }
