@@ -1,0 +1,3 @@
+# Prisma generated files
+**/prisma/migrations/**
+**/prisma/generated/**
