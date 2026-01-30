@@ -14,7 +14,7 @@ datasource db {
 }
 
 model Webcam {
-  id                  Int               @id @default(autoincrement())
+  id                  String            @id @default(cuid())
   name                String            @unique
   angleOfView         Float
   elevation           Int?
@@ -22,12 +22,12 @@ model Webcam {
   longitude           Float
   refreshSeconds      Int?
   comments            String?
-  integrationStatusId Int
+  integrationStatusId String
   integrationStatus   IntegrationStatus @relation(fields: [integrationStatusId], references: [id])
 }
 
 model IntegrationStatus {
-  id       Int    @id @default(autoincrement())
+  id       String @id @default(cuid())
   code     String @unique
   labelKey String
 
