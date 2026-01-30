@@ -1,14 +1,11 @@
 import { WebcamTable } from "@/components/webcams/webcam-table";
 
-import prisma from "@/lib/prisma";
+import { getWebcamList } from "@/features/webcams/api/getWebcamList";
 
 import { WebcamWithStatus } from "@/types/webcam-types";
 
 export default async function WebcamsPage() {
-  const webcams: WebcamWithStatus[] = await prisma.webcam.findMany({
-    include: { integrationStatus: true },
-    orderBy: { name: "asc" },
-  });
+  const webcams: WebcamWithStatus[] = await getWebcamList();
 
   return <WebcamTable webcams={webcams} />;
 }
