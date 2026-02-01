@@ -35,6 +35,8 @@ export default getRequestConfig(async ({ requestLocale }) => {
     home: (await import(`../../messages/${locale}/home.json`)).default,
     layout: (await import(`../../messages/${locale}/layout.json`)).default,
     notFound: (await import(`../../messages/${locale}/not-found.json`)).default,
+    db: (await import(`../../messages/${locale}/db.json`)).default,
+    webcams: (await import(`../../messages/${locale}/webcams.json`)).default,
   };
 
   return {

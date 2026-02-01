@@ -22,17 +22,17 @@ export const DesktopTopbar = () => {
             px={2}
           >
             <Stack alignItems="center" direction="row" spacing={5}>
-              <Link href="#">
+              <Link href="/">
                 <Image
                   alt=""
                   height={80}
-                  src="logos/logo-pyronear.svg"
+                  src="/logos/logo-pyronear.svg"
                   width={200}
                 />
               </Link>
 
               <Stack direction="row" spacing={2}>
-                <Link href="#">{t("Topbar.evaluate")}</Link>
+                <Link href="/webcams">{t("Topbar.evaluate")}</Link>
 
                 <Link href="#">{t("Topbar.addWebcams")}</Link>
               </Stack>

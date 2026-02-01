@@ -1,0 +1,7 @@
+{
+  "integrationStatus": {
+    "integrated": "Intégrée",
+    "evaluation": "En cours d'évaluation",
+    "rejected": "Rejetée"
+  }
+}

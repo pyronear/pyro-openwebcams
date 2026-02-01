@@ -1,0 +1,11 @@
+{
+  "tableHeader": {
+    "name": "Name",
+    "angleOfView": "Angle of view",
+    "latitude": "Latitude",
+    "longitude": "Longitude",
+    "elevation": "Elevation",
+    "refreshSeconds": "Refresh duration (s)",
+    "integrationStatus": "Integration status"
+  }
+}

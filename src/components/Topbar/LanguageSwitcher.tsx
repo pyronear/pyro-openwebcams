@@ -43,14 +43,14 @@ export default function LanguageSwitcher() {
       >
         <MenuItem value="en">
           <StackLanguage
-            iconSrc="gb.svg"
+            iconSrc="/gb.svg"
             label={t("Topbar.languageSwitcher.english")}
           />
         </MenuItem>
 
         <MenuItem value="fr">
           <StackLanguage
-            iconSrc="fr.svg"
+            iconSrc="/fr.svg"
             label={t("Topbar.languageSwitcher.french")}
           />
         </MenuItem>

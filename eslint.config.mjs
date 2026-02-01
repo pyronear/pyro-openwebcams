@@ -23,6 +23,13 @@ export default [
   eslintConfigPrettier,
   ...tailwind.configs["flat/recommended"],
   {
+    ignores: [
+      "node_modules/**",
+      "public/**",
+      "**/migrations/**",
+      "**/prisma/generated/**",
+    ],
+
     plugins: { jest: pluginJest },
 
     languageOptions: {
