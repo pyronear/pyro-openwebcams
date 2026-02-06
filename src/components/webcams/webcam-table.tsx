@@ -22,25 +22,29 @@ export const WebcamTable = ({ webcams }: WebcamTableProps) => {
 
   return (
     <div style={{ padding: "24px" }}>
-      <h1 style={{ marginBottom: "16px" }}>Webcams</h1>
+      <h1 style={{ marginBottom: "16px" }}>{t("webcamList.title")}</h1>
 
       <TableContainer component={Paper}>
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell>{t("tableHeader.name")}</TableCell>
+              <TableCell>{t("webcamList.tableHeader.name")}</TableCell>
 
-              <TableCell>{t("tableHeader.angleOfView")}</TableCell>
+              <TableCell>{t("webcamList.tableHeader.angleOfView")}</TableCell>
 
-              <TableCell>{t("tableHeader.latitude")}</TableCell>
+              <TableCell>{t("webcamList.tableHeader.latitude")}</TableCell>
 
-              <TableCell>{t("tableHeader.longitude")}</TableCell>
+              <TableCell>{t("webcamList.tableHeader.longitude")}</TableCell>
 
-              <TableCell>{t("tableHeader.elevation")}</TableCell>
+              <TableCell>{t("webcamList.tableHeader.elevation")}</TableCell>
 
-              <TableCell>{t("tableHeader.refreshSeconds")}</TableCell>
+              <TableCell>
+                {t("webcamList.tableHeader.refreshSeconds")}
+              </TableCell>
 
-              <TableCell>{t("tableHeader.integrationStatus")}</TableCell>
+              <TableCell>
+                {t("webcamList.tableHeader.integrationStatus")}
+              </TableCell>
             </TableRow>
           </TableHead>
 

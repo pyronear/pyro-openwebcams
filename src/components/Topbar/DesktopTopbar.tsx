@@ -34,7 +34,7 @@ export const DesktopTopbar = () => {
               <Stack direction="row" spacing={2}>
                 <Link href="/webcams">{t("Topbar.evaluate")}</Link>
 
-                <Link href="#">{t("Topbar.addWebcams")}</Link>
+                <Link href="/webcams/new">{t("Topbar.addWebcams")}</Link>
               </Stack>
             </Stack>
 

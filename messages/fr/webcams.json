@@ -1,11 +1,29 @@
 {
-  "tableHeader": {
-    "name": "Nom",
-    "angleOfView": "Angle de vue",
-    "latitude": "Latitude",
-    "longitude": "Longitude",
-    "elevation": "Altitude",
-    "refreshSeconds": "Durée de rafraîchissement (s)",
-    "integrationStatus": "Statut d'intégration"
+  "webcamList": {
+    "title": "Liste des Webcams",
+    "tableHeader": {
+      "name": "Nom",
+      "angleOfView": "Angle de vue",
+      "latitude": "Latitude",
+      "longitude": "Longitude",
+      "elevation": "Altitude",
+      "refreshSeconds": "Durée de rafraîchissement (s)",
+      "integrationStatus": "Statut d'intégration"
+    }
+  },
+  "webcamCreation": {
+    "title": "Ajouter une nouvelle Webcam",
+    "nameLabel": "Nom de la webcam",
+    "angleOfViewLabel": "Angle de vue (en degrés)",
+    "latitudeLabel": "Latitude",
+    "longitudeLabel": "Longitude",
+    "elevationLabel": "Altitude (en mètres)",
+    "refreshSecondsLabel": "Durée de rafraîchissement (en secondes)",
+    "submitButton": "Ajouter la Webcam",
+    "successMessage": "Webcam créée avec succès",
+    "errorMessage": {
+      "nameRequired": "Le nom est requis",
+      "angleOfViewPositive": "L'angle de vue doit être positif"
+    }
   }
 }
