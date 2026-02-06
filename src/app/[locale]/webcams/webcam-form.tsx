@@ -47,6 +47,7 @@ export default function WebcamForm({ action }: Props) {
             )}
 
             <TextField
+              defaultValue={state.createWebcamForm?.get("name") ?? ""}
               error={!!state.errors?.name}
               helperText={
                 state.errors?.name?.[0] ? t(state.errors.name[0]) : undefined
@@ -56,6 +57,17 @@ export default function WebcamForm({ action }: Props) {
             />
 
             <TextField
+              defaultValue={state.createWebcamForm?.get("url") ?? ""}
+              error={!!state.errors?.url}
+              helperText={
+                state.errors?.url?.[0] ? t(state.errors.url[0]) : undefined
+              }
+              label={t("webcamCreation.urlLabel")}
+              name="url"
+            />
+
+            <TextField
+              defaultValue={state.createWebcamForm?.get("angleOfView") ?? ""}
               error={!!state.errors?.angleOfView}
               helperText={
                 state.errors?.angleOfView?.[0]
@@ -68,6 +80,7 @@ export default function WebcamForm({ action }: Props) {
             />
 
             <TextField
+              defaultValue={state.createWebcamForm?.get("latitude") ?? ""}
               error={!!state.errors?.latitude}
               helperText={state.errors?.latitude?.[0]}
               label={t("webcamCreation.latitudeLabel")}
@@ -76,6 +89,7 @@ export default function WebcamForm({ action }: Props) {
             />
 
             <TextField
+              defaultValue={state.createWebcamForm?.get("longitude") ?? ""}
               error={!!state.errors?.longitude}
               helperText={state.errors?.longitude?.[0]}
               label={t("webcamCreation.longitudeLabel")}
@@ -84,6 +98,7 @@ export default function WebcamForm({ action }: Props) {
             />
 
             <TextField
+              defaultValue={state.createWebcamForm?.get("elevation") ?? ""}
               error={!!state.errors?.elevation}
               helperText={state.errors?.elevation?.[0]}
               label={t("webcamCreation.elevationLabel")}
@@ -92,6 +107,7 @@ export default function WebcamForm({ action }: Props) {
             />
 
             <TextField
+              defaultValue={state.createWebcamForm?.get("refreshSeconds") ?? ""}
               error={!!state.errors?.refreshSeconds}
               helperText={state.errors?.refreshSeconds?.[0]}
               label={t("webcamCreation.refreshSecondsLabel")}

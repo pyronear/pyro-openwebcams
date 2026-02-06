@@ -14,6 +14,7 @@
   "webcamCreation": {
     "title": "Ajouter une nouvelle Webcam",
     "nameLabel": "Nom de la webcam",
+    "urlLabel": "URL de la webcam",
     "angleOfViewLabel": "Angle de vue (en degrés)",
     "latitudeLabel": "Latitude",
     "longitudeLabel": "Longitude",
@@ -22,7 +23,10 @@
     "submitButton": "Ajouter la Webcam",
     "successMessage": "Webcam créée avec succès",
     "errorMessage": {
-      "nameRequired": "Le nom est requis",
+      "fieldRequired": "Ce champ est requis",
+      "nameNotUnique": "Ce nom de webcam est déjà utilisé",
+      "urlNotUnique": "Cette URL de webcam a déjà été enregistrée",
+      "urlInvalid": "L'URL est invalide",
       "angleOfViewPositive": "L'angle de vue doit être positif"
     }
   }

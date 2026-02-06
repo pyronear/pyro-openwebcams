@@ -1,7 +1,9 @@
 import { z } from "zod";
 
 export const createWebcamSchema = z.object({
-  name: z.string().min(1, "webcamCreation.errorMessage.nameRequired"),
+  name: z.string().min(1, "webcamCreation.errorMessage.fieldRequired"),
+
+  url: z.url("webcamCreation.errorMessage.urlInvalid"),
 
   angleOfView: z.coerce
     .number()
