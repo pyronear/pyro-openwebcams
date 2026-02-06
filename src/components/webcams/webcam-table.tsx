@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 
 import {
+  Link,
   Paper,
   Table,
   TableBody,
@@ -51,7 +52,13 @@ export const WebcamTable = ({ webcams }: WebcamTableProps) => {
           <TableBody>
             {webcams.map((webcam) => (
               <TableRow key={webcam.id}>
-                <TableCell>{webcam.name}</TableCell>
+                <TableCell>
+                  {webcam.url ? (
+                    <Link href={webcam.url}>{webcam.name}</Link>
+                  ) : (
+                    webcam.name
+                  )}
+                </TableCell>
 
                 <TableCell>{webcam.angleOfView}</TableCell>
 

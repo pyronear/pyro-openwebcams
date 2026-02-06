@@ -12,7 +12,7 @@
     }
   },
   "webcamCreation": {
-    "title": "Add a new Webcam",
+    "title": "Submission form for a new webcam",
     "nameLabel": "Webcam name",
     "urlLabel": "Webcam URL",
     "angleOfViewLabel": "Angle of view (in degrees)",
