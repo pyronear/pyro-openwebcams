@@ -61,7 +61,7 @@
     "tailwindcss-animate": "^1.0.7",
     "tsx": "^4.21.0",
     "ws": "^8.17.0",
-    "zod": "^3.23.8"
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.7.1",

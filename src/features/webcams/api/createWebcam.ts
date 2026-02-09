@@ -7,6 +7,7 @@ export async function saveNewWebcam(webcam: CreateWebcamInputs) {
   await prisma.webcam.create({
     data: {
       name: webcam.name,
+      url: webcam.url,
       angleOfView: webcam.angleOfView,
       latitude: webcam.latitude,
       longitude: webcam.longitude,
