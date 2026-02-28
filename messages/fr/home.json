@@ -1,4 +1,37 @@
 {
   "title": "Pyronear Open Webcams",
-  "subtitle": "Pyronear OpenWebcams est un projet collaboratif au services de la protection des écosystèmes, vous pouvez être le/la prochain.e contributrice !"
+  "subtitle": "Pyronear OpenWebcams est un projet collaboratif au service de la protection des écosystèmes.",
+  "description": "Pyronear OpenWebcams est un projet collaboratif au service de la protection des écosystèmes. Vous pouvez être le ou la prochaine contributrice en proposant de nouvelles webcams à évaluer et à connecter au réseau.",
+  "cta": {
+    "proposeTitle": "Proposez de nouvelles webcams pour augmenter la protection des espaces naturels",
+    "proposeDescription": "Soumettez une webcam locale pour enrichir la couverture du territoire et améliorer la détection précoce.",
+    "proposeButton": "Ajouter une webcam",
+    "evaluateTitle": "Évaluer les webcams proposées au système de détection précoce",
+    "evaluateDescription": "Consultez les webcams candidates et aidez à qualifier les meilleures sources à intégrer.",
+    "evaluateButton": "Évaluer des webcams"
+  },
+  "kpis": {
+    "proposed": "caméras proposées",
+    "connected": "des caméras connectées"
+  },
+  "map": {
+    "filtersTitle": "Filtres",
+    "statusTitle": "État",
+    "typeTitle": "Type",
+    "type": {
+      "PYRONEAR": "Pyronear",
+      "COMMUNAUTAIRE": "Communautaire"
+    },
+    "popup": {
+      "link": "Ouvrir le flux webcam"
+    },
+    "empty": "Aucune webcam ne correspond aux filtres sélectionnés."
+  },
+  "extraLinks": {
+    "title": "Rubriques supplémentaires :",
+    "aboutProject": "Plus d'infos sur le projet",
+    "methodology": "Détails de la méthodologie",
+    "github": "Participer sur GitHub",
+    "extra": "Autre ? Si besoin, il est relativement simple d'ajouter ici des pages informatives complémentaires."
+  }
 }

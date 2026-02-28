@@ -17,6 +17,7 @@ model Webcam {
   id                  String            @id @default(cuid())
   name                String            @unique
   url                 String?           @unique
+  cameraType          CameraType        @default(PYRONEAR)
   angleOfView         Float
   elevation           Int?
   latitude            Float
@@ -33,4 +34,9 @@ model IntegrationStatus {
   labelKey String
 
   webcams Webcam[]
+}
+
+enum CameraType {
+  PYRONEAR
+  COMMUNAUTAIRE
 }

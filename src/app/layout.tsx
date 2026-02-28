@@ -1,8 +1,11 @@
 import { ReactNode } from "react";
+import "react-leaflet-cluster/dist/assets/MarkerCluster.css";
+import "react-leaflet-cluster/dist/assets/MarkerCluster.Default.css";
 
 import { CssBaseline } from "@mui/material";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import { ThemeProvider } from "@mui/material/styles";
+import "leaflet/dist/leaflet.css";
 
 import theme from "../theme";
 import "./globals.css";
