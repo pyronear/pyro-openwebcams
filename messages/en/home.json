@@ -1,4 +1,37 @@
 {
   "title": "Pyronear Open Webcams",
-  "subtitle": "Pyronear OpenWebcams is a collaborative project aimed at protecting ecosystems. You can be the next contributor!"
+  "subtitle": "Pyronear OpenWebcams is a collaborative project focused on ecosystem protection.",
+  "description": "Pyronear OpenWebcams is a collaborative project focused on ecosystem protection. You can be the next contributor by proposing new webcams to review and connect to the network.",
+  "cta": {
+    "proposeTitle": "Suggest new webcams to strengthen protection of natural areas",
+    "proposeDescription": "Submit a local webcam to improve territorial coverage and early detection capabilities.",
+    "proposeButton": "Add a webcam",
+    "evaluateTitle": "Review candidate webcams for the early detection system",
+    "evaluateDescription": "Browse proposed webcams and help qualify the best sources to integrate.",
+    "evaluateButton": "Evaluate webcams"
+  },
+  "kpis": {
+    "proposed": "proposed webcams",
+    "connected": "connected webcams"
+  },
+  "map": {
+    "filtersTitle": "Filters",
+    "statusTitle": "Status",
+    "typeTitle": "Type",
+    "type": {
+      "PYRONEAR": "Pyronear",
+      "COMMUNAUTAIRE": "Community"
+    },
+    "popup": {
+      "link": "Open webcam stream"
+    },
+    "empty": "No webcam matches the selected filters."
+  },
+  "extraLinks": {
+    "title": "Additional sections:",
+    "aboutProject": "Learn more about the project",
+    "methodology": "Methodology details",
+    "github": "Contribute on GitHub",
+    "extra": "Need more? It is straightforward to add additional informational pages here."
+  }
 }
