@@ -15,6 +15,16 @@ const compat = new FlatCompat({
 });
 
 export default [
+  {
+    ignores: [
+      ".next/**",
+      "**/.next/**",
+      "node_modules/**",
+      "public/**",
+      "**/migrations/**",
+      "**/prisma/generated/**",
+    ],
+  },
   ...compat.extends(
     "next/core-web-vitals",
     "next/typescript",
@@ -23,13 +33,6 @@ export default [
   eslintConfigPrettier,
   ...tailwind.configs["flat/recommended"],
   {
-    ignores: [
-      "node_modules/**",
-      "public/**",
-      "**/migrations/**",
-      "**/prisma/generated/**",
-    ],
-
     plugins: { jest: pluginJest },
 
     languageOptions: {
