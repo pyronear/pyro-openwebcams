@@ -42,6 +42,8 @@ WIP
 
 ## Getting Started 🤔
 
+Use Node.js 24.22.1 to run the app. `.nvmrc` pins this version, and `package.json` requires the patched Node 24 line. Bun 1.3.4 remains the package manager for `bun.lockb`; this Node update does not change Bun's certificate trust store. See [Bun's upstream CA change](https://github.com/oven-sh/bun/pull/46159) and [releases](https://github.com/oven-sh/bun/releases) before using Bun for TLS requests.
+
 First, run the development server:
 
 ```bash
@@ -50,8 +52,6 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
